@@ -39,3 +39,5 @@ clear
 figlet "Done!"
 
 rm ~/.local/share/NacreousDawn596/WiSpammer/setup.sh
+
+cd
