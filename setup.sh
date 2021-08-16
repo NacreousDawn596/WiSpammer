@@ -34,6 +34,8 @@ echo "" >> ~/.bashrc
 
 echo "source ~/.local/share/NacreousDawn596/WiSpammer/.wisp.sh" >> ~/.bashrc
 
+clear
+
 figlet "Done!"
 
 rm ~/.local/share/NacreousDawn596/WiSpammer/setup.sh
