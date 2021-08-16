@@ -4,7 +4,7 @@ echo 'please wait a few seconds...'
 
 sleep 1
 
-rm -r ~/local/share/NacreousDawn596/WiSpammer
+sudo rm -r ~/local/share/NacreousDawn596/WiSpammer
 
 sudo apt-get update
 
