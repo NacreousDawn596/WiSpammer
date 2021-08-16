@@ -105,17 +105,17 @@ if [ $user_input == 3 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	echo -n -e "$BOLD_GREEN How many SSIDs do you want? > "
+	echo -n -e "$BOLD_BLUE How many SSIDs do you want? > "
 	echo -n -e "$BOLD_WHITE"
 	read N
 	COUNT=1
 	while [ $COUNT -lt $N ] || [ $COUNT -eq $N ]; do
-		echo $(pwgen 14 1) >> "RANDOM.txt"
+		echo $(pwgen 14 1) >> "RANDOM_wordlist.txt"
 		let COUNT=COUNT+1
 	done
 	clear
 	title
-	echo -e "$BOLD_BLUE Starting process..."
+	echo -e "$BOLD_GREEN Starting process..."
 	echo " If you want to stop it, press CTRL+C."
 	echo " "
 	sleep 1
