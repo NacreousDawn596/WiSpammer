@@ -6,7 +6,7 @@ BOLD_BLUE="\e[1;34m"
 GREEN="\e[0;32m"
 BOLD_GREEN="\e[1;32m"
 
-function exit() {
+function exitss() {
 figlet "wispammer"
 clear
 ifconfig $AD down > /dev/null 2>&1
@@ -16,7 +16,7 @@ ifconfig $AD up > /dev/null 2>&1
 rm random.txt > /dev/null 2>&1
 nmcli device connect $AD > /dev/null 2>&1
 clear
-title
+echo 'I hope you enjoyed'
 exit
 }
 
@@ -52,7 +52,7 @@ if [ $user_input == 1 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	echo -n -e "$BOLD_GREEN enter an SSID name (without spaces) > "
+	echo -n -e "$BOLD_GREEN enter an SSID name > "
 	echo -n -e "$BOLD_WHITE"
 	read WORD
 	echo -n -e "$BOLD_GREEN How many SSIDs do you want? > "
@@ -68,13 +68,13 @@ if [ $user_input == 1 ]; then
 	echo -e "$BOLD_BLUE Starting process..."
 	echo " If you want to stop it, press CTRL+C."
 	echo " "
-	trap exit EXIT
+	trap exitss EXIT
 	sleep 1
 	ifconfig $AD down
 	macchanger -r $AD
 	iwconfig $AD mode monitor
 	ifconfig $AD up
-	trap exit EXIT
+	trap exitss EXIT
 	mdk3 $AD b -f ./$WORD"_wordlist.txt" -a -s 1000
 fi
 if [ $user_input == 2 ]; then
@@ -98,7 +98,7 @@ if [ $user_input == 2 ]; then
 	macchanger -r $AD
 	iwconfig $AD mode monitor
 	ifconfig $AD up
-	trap exit EXIT
+	trap exitss EXIT
 	mdk3 $AD b -f ./$OWN -a -s $(wc -l $OWN | cut -f1 -d ' ')
 fi
 if [ $user_input == 3 ]; then
@@ -123,6 +123,6 @@ if [ $user_input == 3 ]; then
 	macchanger -r $AD
 	iwconfig $AD mode monitor
 	ifconfig $AD up
-	trap exit EXIT
+	trap exitss EXIT
 	mdk3 $AD b -f ./RANDOM_wordlist.txt -a -s $N
 fi
