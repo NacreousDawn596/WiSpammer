@@ -8,13 +8,21 @@ sudo rm -r ~/local/share/NacreousDawn596/WiSpammer
 
 sudo apt-get update
 
-sudo apt-get install upgrade
+sudo apt-get upgrade
 
 sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget
+
+sudo pacman -S mdk3 macchanger pwgen figlet python3 curl wget
+
+sudo dnf install mdk3 macchanger pwgen figlet python3 curl wget
 
 sudo wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
 
 sudo apt-apt install ./kali-archive-keyring_2018.1_all.deb
+
+sudo pacman -S ./kali-archive-keyring_2018.1_all.deb
+
+sudo dnf install ./kali-archive-keyring_2018.1_all.deb
 
 echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
 
