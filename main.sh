@@ -82,14 +82,11 @@ if [ $user_input == 2 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	cat <<EOF | python3
-	def start():
-		global OWN
-		OWN = input("what do you want to name the file? \n->")
-		command = f"gedit ~/.local/share/NacreousDawn596/WiSpammer/{name}"
-		os.system(name)
-	EOF
+	echo 'what is the filename desired?\n'
+	read OWN
 	echo $OWN
+	echo 'write an SSID name on every line then delete this first line' > $OWN
+	nano $OWN
 	echo -n -e "$BOLD_WHITE"
 	clear
 	title
