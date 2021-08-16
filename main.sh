@@ -81,13 +81,15 @@ if [ $user_input == 2 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	python3 .own.py
+	cat <<EOF | python3
+	def start():
+		global OWN
+		OWN = input("what do you want to name the file? \n->")
+		command = f"gedit ~/.local/share/NacreousDawn596/WiSpammer/{name}"
+		os.system(name)
+	EOF
+	echo $OWN
 	echo -n -e "$BOLD_WHITE"
-	while read own
-	do
-	echo $own
-	OWN = $own
-	done < ".conf"
 	clear
 	title
 	echo -e "$BOLD_BLUE Starting process..."
