@@ -24,11 +24,15 @@ echo "" >> /etc/apt/sources.list
 
 cd ..
 
-mv WiSpammer ~/.local/share/NacreousDawn596
+mkdir ~/.local/share/NacreousDawn596
+
+mkdir ~/.local/share/NacreousDawn596/WiSpammer
+
+mv WiSpammer ~/.local/share/NacreousDawn596/WiSpammer
 
 echo "" >> ~/.bashrc
 
-echo "source ~/.local/share/NacreousDawn596/.wisp.sh" >> ~/.bashrc
+echo "source ~/.local/share/NacreousDawn596/WiSpammer/.wisp.sh" >> ~/.bashrc
 
 figlet "Done!"
 
