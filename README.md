@@ -11,4 +11,4 @@ chmod +x setup.sh
 ```
 #How to launch it:
 
-- just type wispammer in the terminal and enjoy ☺️
+- just type **wispammer** in the terminal and enjoy ☺️
