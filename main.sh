@@ -17,9 +17,6 @@ rm random.txt > /dev/null 2>&1
 nmcli device connect $AD > /dev/null 2>&1
 clear
 title
-start
-echo "made by:"
-figlet NacreousDawn596
 exit
 }
 
