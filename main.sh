@@ -1,3 +1,4 @@
+clear
 WHITE="\e[0;17m"
 BOLD_WHITE="\e[1;37m"
 BLACK="\e[0;30m"
