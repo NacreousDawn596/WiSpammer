@@ -82,7 +82,7 @@ if [ $user_input == 2 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	echo 'what is the filename desired?\n'
+	echo 'what is the filename desired?'
 	read OWN
 	echo $OWN
 	echo 'write an SSID name on every line then delete this first line' > $OWN
