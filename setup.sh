@@ -28,7 +28,7 @@ mkdir ~/.local/share/NacreousDawn596
 
 mkdir ~/.local/share/NacreousDawn596/WiSpammer
 
-mv WiSpammer ~/.local/share/NacreousDawn596/WiSpammer
+mv WiSpammer/ ~/.local/share/NacreousDawn596/WiSpammer/
 
 echo "" >> ~/.bashrc
 
