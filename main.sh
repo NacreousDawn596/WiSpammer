@@ -55,7 +55,7 @@ if [ $user_input == 1 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
 	clear
 	title
-	echo -n -e "$BOLD_GREEN enter an SSID name > "
+	echo -n -e "$BOLD_GREEN enter an SSID name (without spaces) > "
 	echo -n -e "$BOLD_WHITE"
 	read WORD
 	echo -n -e "$BOLD_GREEN How many SSIDs do you want? > "
