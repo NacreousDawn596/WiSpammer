@@ -8,7 +8,7 @@ sudo apt-get update
 
 sudo apt-get install upgrade
 
-sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget
+sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget gedit
 
 sudo wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
 
