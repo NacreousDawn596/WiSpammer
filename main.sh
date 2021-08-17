@@ -17,7 +17,7 @@ ifconfig $AD up > /dev/null 2>&1
 rm random.txt > /dev/null 2>&1
 nmcli device connect $AD > /dev/null 2>&1
 clear
-cowsay 'I hope you enjoyed'
+echo "I hope you enjoyed"
 exit
 }
 
@@ -60,8 +60,14 @@ if [ $user_input == 1 ]; then
 	echo -n -e "$BOLD_WHITE"
 	read N
 	COUNT=1
+	python3 .name.py
+	filename='.conf'
+	n=1
+	while read name; do
+	n=$((n+1))
+	done < $filename
 	while [ $COUNT -lt $N ] || [ $COUNT -eq $N ]; do
-		echo $WORD $COUNT >> $WORD"_wordlist.txt"
+		echo $WORD $COUNT >> $name".txt"
 		let COUNT=COUNT+1
 	done
 	clear
@@ -76,7 +82,7 @@ if [ $user_input == 1 ]; then
 	iwconfig $AD mode monitor
 	ifconfig $AD up
 	trap exitss EXIT
-	mdk3 $AD b -f ./$WORD"_wordlist.txt" -a -s 1000
+	mdk3 $AD b -f ./$name".txt" -a -s 1000
 fi
 if [ $user_input == 2 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
