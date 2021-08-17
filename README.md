@@ -1,5 +1,5 @@
 # WiSpammer
-a simple wifi spammer mad with bash, shell and python.
+a simple wifi spammer made with bash, shell and python.
 
 # How to download it:
 
