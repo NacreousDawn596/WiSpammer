@@ -17,7 +17,7 @@ ifconfig $AD up > /dev/null 2>&1
 rm random.txt > /dev/null 2>&1
 nmcli device connect $AD > /dev/null 2>&1
 clear
-echo "I hope you enjoyed"
+echo 'I hope you enjoyed'
 exit
 }
 
