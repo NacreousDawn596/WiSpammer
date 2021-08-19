@@ -38,6 +38,8 @@ mkdir ~/.local/share/NacreousDawn596
 
 mv WiSpammer/ ~/.local/share/NacreousDawn596/
 
+mkdir ~/.local/share/NacreousDawn596/WiSpammer/bin
+
 echo "" >> ~/.bashrc
 
 echo "source ~/.local/share/NacreousDawn596/WiSpammer/.wisp.sh" >> ~/.bashrc
