@@ -83,6 +83,7 @@ if [ $user_input == 1 ]; then
 	ifconfig $AD up
 	trap exitss EXIT
 	mdk3 $AD b -f ./$name".txt" -a -s 1000
+	rm $name".txt"
 fi
 if [ $user_input == 2 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
@@ -106,6 +107,7 @@ if [ $user_input == 2 ]; then
 	ifconfig $AD up
 	trap exitss EXIT
 	mdk3 $AD b -f ./$OWN -a -s $(wc -l $OWN | cut -f1 -d ' ')
+	rm $OWN
 fi
 if [ $user_input == 3 ]; then
 	nmcli device disconnect $AD > /dev/null 2>&1
@@ -131,4 +133,5 @@ if [ $user_input == 3 ]; then
 	ifconfig $AD up
 	trap exitss EXIT
 	mdk3 $AD b -f ./RANDOM_wordlist.txt -a -s $N
+	rm RANDOM_wordlist.txt
 fi
