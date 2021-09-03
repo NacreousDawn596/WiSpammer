@@ -12,7 +12,7 @@ sudo apt-get upgrade
 
 sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig
 
-sudo pacman -S mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig 
+sudo pacman -Sy mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig 
 
 sudo dnf install mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig 
 
