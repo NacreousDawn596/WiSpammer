@@ -10,11 +10,11 @@ sudo apt-get update
 
 sudo apt-get upgrade
 
-sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig
+sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools
 
-sudo pacman -Sy mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig 
+sudo pacman -Sy mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools 
 
-sudo dnf install mdk3 macchanger pwgen figlet python3 curl wget cowsay ifconfig 
+sudo dnf install mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools 
 
 sudo wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
 
