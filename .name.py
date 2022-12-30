@@ -8,3 +8,4 @@ for _ in range(5):
 	result = f"{result}{string[5]}"
 file = open(".conf", 'w')
 file.write(''.join(result))
+file.close()
