@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # WiSpammer
 a simple wifi spammer made with bash, shell and python.
 
@@ -28,6 +27,3 @@ chmod +x setup.sh
 # How to launch it:
 
 - just type **sudo /main.sh** in the terminal or execute the main.sh as root and enjoy ☺️
-=======
-# shadow-hoods.github.io
->>>>>>> 103caf5 (Initial commit)
