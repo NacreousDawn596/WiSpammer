@@ -4,50 +4,16 @@ echo 'please wait a few seconds...'
 
 sleep 1
 
-sudo rm -r ~/.local/share/NacreousDawn596/WiSpammer
+sudo apt-get install -y mdk3 macchanger pwgen python3 curl wget cowsay figlet wireless_tools net-tools
 
-sudo apt-get update
+sudo pacman -Syu mdk3 macchanger pwgen python3 curl wget cowsay figlet wireless_tools net-tools
 
-sudo apt-get upgrade
+sudo dnf install mdk3 macchanger pwgen python3 curl wget cowsay figlet wireless_tools net-tools
 
-sudo apt-get install -y mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools
+sudo apk install mdk3 macchanger pwgen python3 curl wget cowsay figlet wireless_tools net-tools
 
-sudo pacman -Sy mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools 
+#clear
 
-sudo dnf install mdk3 macchanger pwgen figlet python3 curl wget cowsay net-tools 
-
-sudo wget https://http.kali.org/kali/pool/main/k/kali-archive-keyring/kali-archive-keyring_2018.1_all.deb
-
-sudo apt-apt install ./kali-archive-keyring_2018.1_all.deb
-
-sudo pacman -S ./kali-archive-keyring_2018.1_all.deb
-
-sudo dnf install ./kali-archive-keyring_2018.1_all.deb
-
-echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
-
-echo "" >> /etc/apt/sources.list
-
-echo "deb http://repo.kali.org/kali kali-bleeding-edge main" >> /etc/apt/sources.list
-
-echo "" >> /etc/apt/sources.list
-
-cd ..
-
-mkdir ~/.local/share/NacreousDawn596
-
-mv WiSpammer/ ~/.local/share/NacreousDawn596/
-
-mkdir ~/.local/share/NacreousDawn596/WiSpammer/bin
-
-echo "" >> ~/.bashrc
-
-echo "source ~/.local/share/NacreousDawn596/WiSpammer/.wisp.sh" >> ~/.bashrc
-
-clear
+chmod u+x main.sh
 
 figlet "Done!"
-
-rm ~/.local/share/NacreousDawn596/WiSpammer/setup.sh
-
-cd
