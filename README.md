@@ -1,34 +1,61 @@
-# WiSpammer
-a simple wifi spammer made with bash, shell and python.
+# WiSpammer 🚀
 
-# How to download it:
+A lightweight and powerful WiFi SSID spammer built with Bash, Python, and MDK3. Designed for network security testing and educational purposes.
 
-```sh
-sudo apt-get install git && git clone https://github.com/NacreousDawn596/WiSpammer
+## 🛠 Features
+- **Custom SSIDs:** Spam specific names with automatic numbering.
+- **Wordlist Support:** Use your own SSID wordlists.
+- **Randomized Spam:** Generate and spam random SSID names using `pwgen`.
+- **MAC Anonymization:** Automatically changes your MAC address before starting.
+- **Cross-Platform:** Now supports Docker for easier deployment across different Linux distributions.
+
+## 📋 Dependencies
+The following tools are required for WiSpammer to function:
+- `mdk3` / `mdk4`
+- `macchanger`
+- `pwgen`
+- `python3`
+- `curl` & `wget`
+- `cowsay` & `figlet`
+- `wireless_tools` & `net-tools`
+- `rfkill` & `aircrack-ng` (for `airmon-ng`)
+
+## 🚀 Quick Start (Native)
+
+### 1. Installation (Debian/Ubuntu)
+```bash
+git clone https://github.com/NacreousDawn596/WiSpammer
 cd WiSpammer
 chmod +x setup.sh
-# this requires mdk3 to be already installed, so for arch users try searching on aur or on https://mirror.archstrike.org/x86_64/archstrike/
-./setup.sh # or install the dependencies manually in case anything fails
+./setup.sh
 ```
 
-# Dependencies:
-<ul>
-    <li>mdk3</li>
-    <li>macchanger</li>
-    <li>pwgen</li>
-    <li>python3</li>
-    <li>curl</li>
-    <li>wget</li>
-    <li>cowsay</li>
-    <li>figlet</li>
-    <li>wireless_tools</li>
-    <li>net-tools</li>
-</ul>
+### 2. Execution
+```bash
+sudo ./main.sh
+```
 
-# Wait!
+---
 
-- I just wanna say big thanks to <a href="https://github.com/archstrike">@archstrike</a> lol
+## 🐳 Docker (Recommended for Portability)
 
-# How to launch it:
+Run WiSpammer without worrying about local dependencies. The Docker image caches all tools for offline use.
 
-- just type **sudo ./main.sh** in the terminal or execute the main.sh as root and enjoy ☺️
+### Build
+```bash
+docker build -t wispammer .
+```
+
+### Run
+```bash
+sudo docker run --rm -it --privileged --network host --pid host -v /var/run/dbus:/var/run/dbus wispammer
+```
+*Note: Requires a WiFi adapter that supports Monitor Mode.*
+
+---
+
+## ⚠️ Disclaimer
+**WiSpammer is for educational and authorized security testing only.** Unauthorized use of this tool against networks you do not own is illegal and unethical. The developer is not responsible for any misuse.
+
+## 🤝 Acknowledgments
+- Big thanks to [@archstrike](https://github.com/archstrike) for their contributions to the wireless security community.
