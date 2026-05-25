@@ -6,6 +6,8 @@ A lightweight and powerful WiFi SSID spammer built with Bash, Python, and MDK3. 
 - **Custom SSIDs:** Spam specific names with automatic numbering.
 - **Wordlist Support:** Use your own SSID wordlists.
 - **Randomized Spam:** Generate and spam random SSID names using `pwgen`.
+- **Deauthentication Attack:** Disconnect clients from nearby networks.
+- **RF Jamming:** Attempt to jam WiFi channels using MDK3.
 - **MAC Anonymization:** Automatically changes your MAC address before starting.
 - **Cross-Platform:** Now supports Docker for easier deployment across different Linux distributions.
 
